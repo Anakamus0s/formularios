@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+
+    <form>
+        <h3>Texto</h3>
+    
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" size="100%">
+        
+        <h3>Radio Button</h3>
+
+        
+
+        <label> <input type="radio" name="gender" id="gender1"> Male </label>
+        <br>
+        <label> <input type="radio" name="gender" id="gender2">Female </label>
+        <br>
+        <label> <input type="radio" name="gender" id="gender3"> Other </label>
+        <br>
+        <input type="button" value="Reset" onclick="reset()"> 
+        
+        <script>
+            function reset() {
+                
+                document.getElementById("gender1").value = "";
+                document.getElementById("gender2").value = "";
+                document.getElementById("gender3").value = "";
+            }
+        </script>
+
+        <h3>Selector de opciones</h3>
+
+        <select name="marcas">
+            <option value="marca0">Sin selecionar</option>
+            <option value="marca1">Volvo</option>
+            <option value="marca2">Ford</option>
+            <option value="marca3">Nissan</option>
+            <option value="marca4">Honda</option>
+            <option value="marca5">Mazda</option>
+        </select>
+
+        <h3>Área de texto</h3>
+
+        <textarea name="area de texto" cols=75" rows="10" placeholder="Texto inicial dentro del campo"></textarea>
+
+        <h3>Contraseña</h3>
+
+        <label for="contraseña">Keyword:</label>
+        <input type="password">
+
+        <h3>Checkbox</h3>
+
+        <p>Elige cuál es tu vehiculo</p>
+
+        <input type="checkbox">
+        Tengo una bici
+        <br>
+        <input type="checkbox">
+        Tengo una coche
+        <br>
+        <input type="checkbox">
+        Tengo una moto
+        
+
+        <h3>Subida de archivo</h3>
+
+        <p>Seleciona el/los archivos a subir: <input type="file"></p>
+
+        <input type="submit">
+
+    </form>
+
+
+    
+
+
+
+
+    
+</body>
+</html>
