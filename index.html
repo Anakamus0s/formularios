@@ -18,19 +18,19 @@
         
 
         <label> <input type="radio" name="gender" id="gender1"> Male </label>
-        <br>
+        <br />
         <label> <input type="radio" name="gender" id="gender2">Female </label>
-        <br>
+        <br />
         <label> <input type="radio" name="gender" id="gender3"> Other </label>
-        <br>
+        <br />
         <input type="button" value="Reset" onclick="reset()"> 
         
         <script>
             function reset() {
                 
-                document.getElementById("gender1").value = "";
-                document.getElementById("gender2").value = "";
-                document.getElementById("gender3").value = "";
+                document.getElementById("gender1").id = "";
+                document.getElementById("gender2").id = "";
+                document.getElementById("gender3").id = "";
             }
         </script>
 
@@ -60,10 +60,10 @@
 
         <input type="checkbox">
         Tengo una bici
-        <br>
+        <br />
         <input type="checkbox">
         Tengo una coche
-        <br>
+        <br />
         <input type="checkbox">
         Tengo una moto
         
@@ -72,7 +72,7 @@
 
         <p>Seleciona el/los archivos a subir: <input type="file"></p>
 
-        <input type="submit">
+        <input type="submit" />
 
     </form>
 
