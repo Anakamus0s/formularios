@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formularios</title>
+    <script>
+        function reset() {
+
+            document.getElementsByName("gender").checked = false;
+        }
+    </script>
 </head>
+
 <body>
 
+    <h3>Texto</h3>
+
     <form>
-        <h3>Texto</h3>
-    
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" size="100%">
-        
+
         <h3>Radio Button</h3>
 
+
+        <input type="radio" name="gender" id="male" value="m"> 
+        <label>Male</label>
+        <br />
+        <input type="radio" name="gender" id="female" value="f">
+        <label>Female</label>
+        <br />
+        <input type="radio" name="gender" id="other" value="o" checked>
+        <label>Other</label>
+        <br />
+        <button type="button" value="Reset" onclick="reset()">Reset </button>
         
 
-        <label> <input type="radio" name="gender" id="gender1"> Male </label>
-        <br />
-        <label> <input type="radio" name="gender" id="gender2">Female </label>
-        <br />
-        <label> <input type="radio" name="gender" id="gender3"> Other </label>
-        <br />
-        <input type="button" value="Reset" onclick="reset()"> 
-        
-        <script>
-            function reset() {
-                
-                document.getElementById("gender1").id = "";
-                document.getElementById("gender2").id = "";
-                document.getElementById("gender3").id = "";
-            }
-        </script>
 
         <h3>Selector de opciones</h3>
 
@@ -58,15 +61,15 @@
 
         <p>Elige cuál es tu vehiculo</p>
 
-        <input type="checkbox">
-        Tengo una bici
+        <input type="checkbox" name="bici" id="bici">
+        <label for="bici">Tengo una bici</label>
         <br />
-        <input type="checkbox">
-        Tengo una coche
+        <input type="checkbox" name="coche" id="coche">
+        <label for="coche">Tengo una coche</label>
         <br />
-        <input type="checkbox">
-        Tengo una moto
-        
+        <input type="checkbox" name="moto" id="moto">
+        <label for="moto">Tengo una moto</label>
+
 
         <h3>Subida de archivo</h3>
 
@@ -77,11 +80,12 @@
     </form>
 
 
-    
 
 
 
 
-    
+
+
 </body>
+
 </html>
