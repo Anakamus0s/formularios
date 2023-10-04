@@ -11,69 +11,89 @@
             document.getElementsByName("gender").checked = false;
         }
     </script>
+    <script>
+        function testForm() {
+            alert(document.getElementById("nombre").value);
+            console.log(document.querySelector('input[name="gender"]:checked').value);
+            console.log(document.getElementById("marcas").value);
+            if (document.getElementById("bici").checked) {
+                console.log(document.getElementById("bici").value);
+            }
+            if (document.getElementById("coche").checked) {
+                console.log(document.getElementById("coche").value);
+            }
+            if (document.getElementById("moto").checked) {
+                console.log(document.getElementById("moto").value);
+            }
+            console.log(document.getElementById("textarea").value)
+            console.log(document.getElementById("contraseña").value)
+            console.log(document.getElementById("archivo").value)
+            return false;
+        }
+    </script>
 </head>
 
 <body>
 
     <h3>Texto</h3>
 
-    <form>
+    <form onsubmit="return testForm()">
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" size="100%">
+        <input type="text" id="nombre" size="100%" />
 
         <h3>Radio Button</h3>
 
 
-        <input type="radio" name="gender" id="male" value="m"> 
+        <input type="radio" name="gender" id="male" value="m" />
         <label>Male</label>
         <br />
-        <input type="radio" name="gender" id="female" value="f">
+        <input type="radio" name="gender" id="female" value="f" />
         <label>Female</label>
         <br />
-        <input type="radio" name="gender" id="other" value="o" checked>
+        <input type="radio" name="gender" id="other" value="o" checked />
         <label>Other</label>
         <br />
         <button type="button" value="Reset" onclick="reset()">Reset </button>
-        
+
 
 
         <h3>Selector de opciones</h3>
 
-        <select name="marcas">
-            <option value="marca0">Sin selecionar</option>
-            <option value="marca1">Volvo</option>
-            <option value="marca2">Ford</option>
-            <option value="marca3">Nissan</option>
-            <option value="marca4">Honda</option>
-            <option value="marca5">Mazda</option>
+        <select name="marcas" id="marcas">
+            <option value="m0" name="marcas" id="marca0">Sin selecionar</option>
+            <option value="m1" name="marcas" id="marca1">Volvo</option>
+            <option value="m2" name="marcas" id="marca2">Ford</option>
+            <option value="m3" name="marcas" id="marca3">Nissan</option>
+            <option value="m4" name="marcas" id="marca4">Honda</option>
+            <option value="m5" name="marcas" id="marca5">Mazda</option>
         </select>
 
         <h3>Área de texto</h3>
 
-        <textarea name="area de texto" cols=75" rows="10" placeholder="Texto inicial dentro del campo"></textarea>
+        <textarea name="area de texto" cols=75" rows="10" placeholder="Texto inicial dentro del campo" id="textarea"></textarea>
 
         <h3>Contraseña</h3>
 
         <label for="contraseña">Keyword:</label>
-        <input type="password">
+        <input type="password" name="contraseña" id="contraseña" />
 
         <h3>Checkbox</h3>
 
         <p>Elige cuál es tu vehiculo</p>
 
-        <input type="checkbox" name="bici" id="bici">
+        <input type="checkbox" name="bici" id="bici" value="bici"/>
         <label for="bici">Tengo una bici</label>
         <br />
-        <input type="checkbox" name="coche" id="coche">
+        <input type="checkbox" name="coche" id="coche" value="coche" />
         <label for="coche">Tengo una coche</label>
         <br />
-        <input type="checkbox" name="moto" id="moto">
+        <input type="checkbox" name="moto" id="moto" value="moto"/>
         <label for="moto">Tengo una moto</label>
 
 
         <h3>Subida de archivo</h3>
 
-        <p>Seleciona el/los archivos a subir: <input type="file"></p>
+        <p>Seleciona el/los archivos a subir: <input type="file" name="subirarchivo" id="archivo" ></p>
 
         <input type="submit" />
 
