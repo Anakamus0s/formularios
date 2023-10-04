@@ -7,11 +7,14 @@
     <title>Formularios</title>
     <script>
         function reset() {
+            console.log("error");
+            //var campo = document.getElementById("male");
+            //console.log(campo);
+            //document.getElementById("male").checked = false;
 
-            document.getElementsByName("gender").checked = false;
+            //return false;
         }
-    </script>
-    <script>
+
         function testForm() {
             alert(document.getElementById("nombre").value);
             console.log(document.querySelector('input[name="gender"]:checked').value);
@@ -53,7 +56,7 @@
         <input type="radio" name="gender" id="other" value="o" checked />
         <label>Other</label>
         <br />
-        <button type="button" value="Reset" onclick="reset()">Reset </button>
+        <input type="button" value="Reset" onclick="reset()" />
 
 
 
@@ -70,7 +73,8 @@
 
         <h3>Área de texto</h3>
 
-        <textarea name="area de texto" cols=75" rows="10" placeholder="Texto inicial dentro del campo" id="textarea"></textarea>
+        <textarea name="area de texto" cols=75" rows="10" placeholder="Texto inicial dentro del campo"
+            id="textarea"></textarea>
 
         <h3>Contraseña</h3>
 
@@ -81,19 +85,19 @@
 
         <p>Elige cuál es tu vehiculo</p>
 
-        <input type="checkbox" name="bici" id="bici" value="bici"/>
+        <input type="checkbox" name="bici" id="bici" value="bici" />
         <label for="bici">Tengo una bici</label>
         <br />
         <input type="checkbox" name="coche" id="coche" value="coche" />
         <label for="coche">Tengo una coche</label>
         <br />
-        <input type="checkbox" name="moto" id="moto" value="moto"/>
+        <input type="checkbox" name="moto" id="moto" value="moto" />
         <label for="moto">Tengo una moto</label>
 
 
         <h3>Subida de archivo</h3>
 
-        <p>Seleciona el/los archivos a subir: <input type="file" name="subirarchivo" id="archivo" ></p>
+        <p>Seleciona el/los archivos a subir: <input type="file" name="subirarchivo" id="archivo"></p>
 
         <input type="submit" />
 
